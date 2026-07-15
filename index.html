@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Kanban Board</h1>
+    <p class="subtitle">Drag cards between columns to update their status</p>
+  </header>
+
+  <main class="board" id="board">
+    <section class="column" data-status="todo">
+      <div class="column-header">
+        <h2>To Do</h2>
+        <span class="card-count" data-count-for="todo">0</span>
+      </div>
+      <div class="cards" data-status="todo"></div>
+      <button class="add-card-btn" data-status="todo">+ Add card</button>
+    </section>
+
+    <section class="column" data-status="in-progress">
+      <div class="column-header">
+        <h2>In Progress</h2>
+        <span class="card-count" data-count-for="in-progress">0</span>
+      </div>
+      <div class="cards" data-status="in-progress"></div>
+      <button class="add-card-btn" data-status="in-progress">+ Add card</button>
+    </section>
+
+    <section class="column" data-status="done">
+      <div class="column-header">
+        <h2>Done</h2>
+        <span class="card-count" data-count-for="done">0</span>
+      </div>
+      <div class="cards" data-status="done"></div>
+      <button class="add-card-btn" data-status="done">+ Add card</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
